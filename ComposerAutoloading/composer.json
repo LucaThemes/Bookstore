@@ -1,0 +1,11 @@
+{
+    "name": "lukaszformela/bookstore",
+    "description": "Sample bookstore app",
+    "authors": [
+        {
+            "name": "Lukasz Formela",
+            "email": "hello@lukaszformela.com"
+        }
+    ],
+    "require": {}
+}

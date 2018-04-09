@@ -1,0 +1,11 @@
+/**
+ * Bookstore project
+ * Version: 0.0.1
+ * Author: Lukasz Formela
+ * Author Website: lukaszformela.com
+ */
+
+ .content {
+     max-width: 980px;
+     margin: 60px auto 0;
+ }
