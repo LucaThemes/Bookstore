@@ -3,10 +3,7 @@ DirectoryIndex index.php
 Options +FollowSymLinks -MultiViews
 
 #REWRITE ENGINE
-RewriteEngine On
-#RewriteRule ^([a-z]+)/([a-z]+)$ index.php?c=$1&a=$2 [NC]
-
-#RewriteRule ^(.*)index.php?(.*)$ $1/$2 [NC]
-#RewriteRule ^(.*)&(.*)$ $1/$2 [NC]
-#RewriteRule ^/([a-z]+)$ c=$1 [NC]
-#RewriteRule ^/([a-z]+)$ a=$1 [NC]
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
