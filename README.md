@@ -11,4 +11,5 @@ TO DO:
 * customer panel
 * shopping cart
 * clean the code
+* do a proper shop layout
 * ...
