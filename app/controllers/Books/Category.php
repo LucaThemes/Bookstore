@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Books Category Controller
+ * Bookstore Category Controller
  * 
  * @author    Lukasz Formela
  * @link      lukaszformela.com
@@ -58,7 +58,7 @@ class Category {
 
         $sQuery = $this->sQuery;
 
-        if ( !empty( $sQueryParam ) ) {
+        if ( !empty( $sQueryParam ) && $sQueryParam != 'all' ) {
             $sQuery .= ' WHERE book_genre = "' . $sQueryParam . '"';
         }
         

@@ -1,5 +1,8 @@
 # Bookstore
 
+0.0.3 - 18.04.2018
+- index.php now displays homepage by default and runs a router if there are url parameters provided
+
 0.0.2 - 18.04.2018
 - displaying books by category works now,
 - unnecessary files removed.

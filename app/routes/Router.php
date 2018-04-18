@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Books Router
+ * Bookstore Router
  * 
  * @author    Lukasz Formela
  * @link      lukaszformela.com
@@ -27,9 +27,14 @@ class Router {
         $sNamespace = '\\Bookstore\Controllers';
 
         /**
-         * Default controller
+         * Home controller
          */
-        $sDefaultController = $sNamespace . '\\NotFound';
+        $sHomeController = $sNamespace . '\\Home';
+
+        /**
+         * 404 controller
+         */
+        $sNotFoundController = $sNamespace . '\\NotFound';
 
         /**
          * Controller name
@@ -57,13 +62,15 @@ class Router {
          */
         $sFoundNamespace = self::findNamespace( $sController . '.php', $aDirStructure, 'Bookstore' );
 
-        // If method parameter exists as a file name, proceed
-        if ( in_array( $sController . '.php', $aDirStructure ) ) {
+        // If method parameter is present and exists as a file name, proceed
+        if ( !empty( $sController ) && in_array( $sController . '.php', $aDirStructure ) ) {
             $sControllerClass = $sNamespace . '\\' . $sFoundNamespace . '\\' . $sController;
             $oNewController = new $sControllerClass;
             call_user_func( array($oNewController, 'getBy' . $sController), $aParams['query'] );
+        } elseif ( empty( $sController ) ) {
+            call_user_func( array( new $sHomeController, 'goHome' ) );
         } else {
-            call_user_func( array(new $sDefaultController, 'getView') );
+            call_user_func( array(new $sNotFoundController, 'getView') );
         }
 
     }
