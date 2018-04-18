@@ -6,11 +6,4 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Bookstore\\Configs\\Config' => $baseDir . '/app/configs/Config.php',
-    'Bookstore\\Controllers\\BooksController' => $baseDir . '/app/controllers/BooksController.php',
-    'Bookstore\\Controllers\\NotFound' => $baseDir . '/app/controllers/NotFound.php',
-    'Bookstore\\Database\\Db' => $baseDir . '/app/database/Db.php',
-    'Bookstore\\Models\\BooksModel' => $baseDir . '/app/models/BooksModel.php',
-    'Bookstore\\Routes\\Router' => $baseDir . '/app/routes/Router.php',
-    'Bookstore\\Utils\\Dumper' => $baseDir . '/app/views/utils/dumper.php',
 );

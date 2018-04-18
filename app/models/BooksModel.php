@@ -5,13 +5,13 @@
  * 
  * @author    Lukasz Formela
  * @link      lukaszformela.com
- * @copyright (c) 2018. Lukasz Formela. All Rights Reserver.
+ * @copyright (c) 2018. Lukasz Formela. All Rights Reserved.
  * @license   Lesser General Public License <http://www.gnu.org/copyleft/lesser.html>
  * @since     0.0.1
  */
 
 namespace Bookstore\Models;
-// use PDO;
+
 use Bookstore\Database\Db;
 
 class BooksModel extends Db {
@@ -23,7 +23,7 @@ class BooksModel extends Db {
 
     public $query;
 
-    public function getBooksList($query) {
+    public function runQuery($query) {
 
         $this->query = $query;
 

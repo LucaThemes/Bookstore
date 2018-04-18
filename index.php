@@ -5,7 +5,7 @@
  * 
  * @author    Lukasz Formela
  * @link      lukaszformela.com
- * @copyright (c) 2018. Lukasz Formela. All Rights Reserver.
+ * @copyright (c) 2018. Lukasz Formela. All Rights Reserved.
  * @license   Lesser General Public License <http://www.gnu.org/copyleft/lesser.html>
  * @since     0.0.1
  */
@@ -14,7 +14,11 @@ use Bookstore\Routes\Router;
 
 require 'vendor/autoload.php';
 
-define( 'ROOT_PATH', __DIR__ . '/' );
+define( 'ROOT_PATH', __DIR__ );
+define( 'APP_PATH', ROOT_PATH . '\app' );
+define( 'CTRL_PATH', APP_PATH . '\controllers' );
+define( 'MDL_PATH', APP_PATH . '/models' );
+define( 'VWS_PATH', APP_PATH . '/views' );
 
 ?>
 
@@ -70,9 +74,10 @@ define( 'ROOT_PATH', __DIR__ . '/' );
                             </div>
                             <div class="sidebar-filter__filters">
                                 <ul>
-                                    <li><a href="/bookstore/bookscontroller/getallbooks">All books</a></li>
-                                    <li><a href="/bookstore/bookscontroller/getbooksbygenre/drama">All books</a></li>
-                                    <li>CATEGORY 3
+                                    <li><a href="/bookstore">All books</a></li>
+                                    <li><a href="/bookstore/category/drama">Drama</a></li>
+                                    <li><a href="/bookstore/category/comedy">Comedy</a></li>
+                                    <li><a href="<?php $_SERVER['REQUEST_URI']; ?>">Third option</a>
                                         <ul>
                                             <li>SUB CATEGORY 1</li>
                                             <li>SUB CATEGORY 2</li>
@@ -83,13 +88,13 @@ define( 'ROOT_PATH', __DIR__ . '/' );
                         </div>
                         <div class="sidebar-filter">
                             <div class="sidebar-filter__heading">
-                                > AUTHOR
+                                > PRICE
                             </div>
                             <div class="sidebar-filter__filters">
                                 <ul>
-                                    <li>AUTHOR 1</li>
-                                    <li>AUTHOR 2</li>
-                                    <li>AUTHOR 3
+                                    <li><a href="<?php $_SERVER['REQUEST_URI']; ?>">0-20</a></li>
+                                    <li><a href="<?php $_SERVER['REQUEST_URI']; ?>">20-30</a></li>
+                                    <li><a href="<?php $_SERVER['REQUEST_URI']; ?>">30+</a>
                                         <ul>
                                             <li>SUB AUTHOR 1</li>
                                             <li>SUB AUTHOR 2</li>
@@ -101,10 +106,11 @@ define( 'ROOT_PATH', __DIR__ . '/' );
                     </div>
                     <div class="col-md-8">
                     <?php 
+
+                        $params = explode('/', $_SERVER['REQUEST_URI']);
                         $aParams = [
-                            'controller' => ( !empty($_GET['c']) ? $_GET['c'] : 'bookscontroller' ),
-                            'action'     => ( !empty($_GET['a']) ? $_GET['a'] : 'getallbooks' ),
-                            'query'      => ( !empty($_GET['q']) ? $_GET['q'] : 'all' ),
+                            'controller' => ( !empty($params[2]) ? $params[2] : 'category' ),
+                            'query'      => ( !empty($params[3]) ? $params[3] : '' ),
                         ];
                         Router::run($aParams);
                     ?>

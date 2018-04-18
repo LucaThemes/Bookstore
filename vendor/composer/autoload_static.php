@@ -20,22 +20,11 @@ class ComposerStaticInit17bf212cf356fa232e67a0dc5b872b39
         ),
     );
 
-    public static $classMap = array (
-        'Bookstore\\Configs\\Config' => __DIR__ . '/../..' . '/app/configs/Config.php',
-        'Bookstore\\Controllers\\BooksController' => __DIR__ . '/../..' . '/app/controllers/BooksController.php',
-        'Bookstore\\Controllers\\NotFound' => __DIR__ . '/../..' . '/app/controllers/NotFound.php',
-        'Bookstore\\Database\\Db' => __DIR__ . '/../..' . '/app/database/Db.php',
-        'Bookstore\\Models\\BooksModel' => __DIR__ . '/../..' . '/app/models/BooksModel.php',
-        'Bookstore\\Routes\\Router' => __DIR__ . '/../..' . '/app/routes/Router.php',
-        'Bookstore\\Utils\\Dumper' => __DIR__ . '/../..' . '/app/views/utils/dumper.php',
-    );
-
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit17bf212cf356fa232e67a0dc5b872b39::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit17bf212cf356fa232e67a0dc5b872b39::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit17bf212cf356fa232e67a0dc5b872b39::$classMap;
 
         }, null, ClassLoader::class);
     }

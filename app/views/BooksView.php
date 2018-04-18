@@ -2,7 +2,6 @@
 
 <div class="view-test">
     <?php if (!empty($aResult)) { ?>
-        <p>SOMETHING FOUND</p>
         <table class="table">
             <thead>
                 <tr>
@@ -30,6 +29,6 @@
             </tbody>
         </table>        
     <?php } else { ?>
-        <p>NOTHING FOUND</p>
+        <p><div class="alert alert-info" role="alert">NOTHING FOUND, TRY ANOTHER SEARCH.</div><br /></p>
     <?php } ?>
 </div>
