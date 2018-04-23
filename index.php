@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Our HTML index file
+ * Our index file
  * 
  * @author    Lukasz Formela
  * @link      lukaszformela.com
@@ -10,15 +10,12 @@
  * @since     0.0.1
  */
 
-use Bookstore\Routes\Router;
+use Bookstore\Routes\Router,
+    Bookstore\Helpers\UrlParameters;
 
 require 'vendor/autoload.php';
 
-define( 'ROOT_PATH', __DIR__ );
-define( 'APP_PATH', ROOT_PATH . '\app' );
-define( 'CTRL_PATH', APP_PATH . '\controllers' );
-define( 'MDL_PATH', APP_PATH . '/models' );
-define( 'VWS_PATH', APP_PATH . '/views' );
+define( 'ROOT_PATH', dirname(__FILE__) );
 
 ?>
 
@@ -36,15 +33,7 @@ define( 'VWS_PATH', APP_PATH . '/views' );
                         <?php require 'app/views/inc/sidebar.php'; ?>
                     </div>
                     <div class="col-md-8">
-                    <?php 
-
-                        $params = explode('/', $_SERVER['REQUEST_URI']);
-                        $aParams = [
-                            'controller' => ( !empty($params[2]) ? $params[2] : '' ),
-                            'query'      => ( !empty($params[3]) ? $params[3] : 'all' ),
-                        ];
-                        Router::run($aParams);
-                    ?>
+                        <?php Router::get( UrlParameters::getParams() ); ?>
                     </div>
                 </div>
             </div>

@@ -1,11 +1,69 @@
-/**
+/*
  * Bookstore project
  * Version: 0.0.1
  * Author: Lukasz Formela
  * Author Website: lukaszformela.com
  */
 
- .content {
-     max-width: 980px;
-     margin: 60px auto 0;
- }
+/* --------------------------
+TABLE OF CONTENTS
+# 1. Clearings
+# 2. Body
+# 3. Navbar
+# 4. Content
+# 5. Sidebar
+---------------------------- */
+
+/* --------------------------
+1. CLEARINGS
+---------------------------- */
+
+/* --------------------------
+2. BODY
+---------------------------- */
+body {
+    font-size: 1em;
+    font-size: 16px;
+}
+
+ul,
+li {
+   list-style-type: none;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    padding-left: 10px;
+}
+
+/* --------------------------
+3. NAVBAR
+---------------------------- */
+
+
+/* --------------------------
+4. CONTENT
+---------------------------- */
+.content {
+    max-width: 980px;
+    margin: 60px auto 0;
+}
+
+/* --------------------------
+5. SIDEBAR
+---------------------------- */
+.sidebar-filter__heading {
+    padding: 8px 5px;
+    background: #EEEEEE;
+}
+
+.sidebar-filter__filters {
+    font-size: 0.9em;
+}
+
+.sidebar-filter__filters li {
+    padding-top: 5px;
+}

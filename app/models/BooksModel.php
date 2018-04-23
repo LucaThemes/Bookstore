@@ -17,19 +17,26 @@ use Bookstore\Database\Db;
 class BooksModel extends Db {
 
     /**
+     * SQL query
+     */
+    private $sQuery;
+
+    /**
+     * SQL results
+     */
+    private $aResults;
+
+    /**
      * @param  string $query   An SQL query to be executed in Db.php
      * @return array  $results Data from database
      */
+    public function runQuery($sQuery) {
 
-    public $query;
+        $this->sQuery = $sQuery;
 
-    public function runQuery($query) {
+        $aResults = Db::queryExecute($sQuery);
 
-        $this->query = $query;
-
-        $results = Db::queryExecute($query);
-
-        return $results;
+        return $aResults;
     }
 
 }

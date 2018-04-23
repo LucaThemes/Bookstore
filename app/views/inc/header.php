@@ -13,7 +13,7 @@
 ?>
     <head>
         <meta charset="utf-8">
-        <title>PUT A TITLE FROM CONFIG HERE</title>
+        <title><?php echo \Bookstore\Configs\Config::PROJ_NAME; ?></title>
         <meta name="author" content="Lukasz Formela | lukaszformela.com">
         <meta name="description" content="Bookstore sample project">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

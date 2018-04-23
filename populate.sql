@@ -24,17 +24,7 @@ INSERT INTO bookstore.books (
     '49',
     '999',
     '1234567890123'
-);
-
-INSERT INTO bookstore.books(
-    book_title,
-    book_genre,
-    book_author_fname,
-    book_author_sname,
-    book_price,
-    book_amount,
-    book_isbn
-) VALUES (
+), (
     'Book title 2',
     'Comedy',
     'Finlay',
@@ -42,17 +32,7 @@ INSERT INTO bookstore.books(
     '39',
     '567',
     '1234567890124'
-);
-
-INSERT INTO bookstore.books (
-    book_title,
-    book_genre,
-    book_author_fname,
-    book_author_sname,
-    book_price,
-    book_amount,
-    book_isbn
-) VALUES (
+), (
     'Book title 3',
     'Comedy',
     'Jayden',
@@ -60,17 +40,7 @@ INSERT INTO bookstore.books (
     '29',
     '545',
     '1234567890125'
-);
-
-INSERT INTO bookstore.books (
-    book_title,
-    book_genre,
-    book_author_fname,
-    book_author_sname,
-    book_price,
-    book_amount,
-    book_isbn
-) VALUES (
+), (
     'Book title 4',
     'Poetry',
     'Holly',
@@ -78,17 +48,7 @@ INSERT INTO bookstore.books (
     '19',
     '999',
     '1234567890126'
-);
-
-INSERT INTO bookstore.books (
-    book_title,
-    book_genre,
-    book_author_fname,
-    book_author_sname,
-    book_price,
-    book_amount,
-    book_isbn
-) VALUES (
+), (
     'Book title 5',
     'Drama',
     'Millie',
@@ -96,17 +56,7 @@ INSERT INTO bookstore.books (
     '49',
     '999',
     '1234567890127'
-);
-
-INSERT INTO bookstore.books (
-    book_title,
-    book_genre,
-    book_author_fname,
-    book_author_sname,
-    book_price,
-    book_amount,
-    book_isbn
-) VALUES (
+), (
     'Book title 6',
     'Action',
     'Brandon',
@@ -114,17 +64,7 @@ INSERT INTO bookstore.books (
     '39',
     '999',
     '1234567890128'
-);
-
-INSERT INTO bookstore.books (
-    book_title,
-    book_genre,
-    book_author_fname,
-    book_author_sname,
-    book_price,
-    book_amount,
-    book_isbn
-) VALUES (
+),  (
     'Book title 7',
     'Comedy',
     'Anna',
@@ -132,17 +72,7 @@ INSERT INTO bookstore.books (
     '39',
     '999',
     '1234567890129'
-);
-
-INSERT INTO bookstore.books (
-    book_title,
-    book_genre,
-    book_author_fname,
-    book_author_sname,
-    book_price,
-    book_amount,
-    book_isbn
-) VALUES (
+), (
     'Book title 8',
     'Comedy',
     'Thomas',
@@ -150,17 +80,7 @@ INSERT INTO bookstore.books (
     '29',
     '999',
     '1234567890130'
-);
-
-INSERT INTO bookstore.books (
-    book_title,
-    book_genre,
-    book_author_fname,
-    book_author_sname,
-    book_price,
-    book_amount,
-    book_isbn
-) VALUES (
+), (
     'Book title 9',
     'Poetry',
     'Kayleigh',
@@ -168,17 +88,7 @@ INSERT INTO bookstore.books (
     '59',
     '999',
     '1234567890131'
-);
-
-INSERT INTO bookstore.books (
-    book_title,
-    book_genre,
-    book_author_fname,
-    book_author_sname,
-    book_price,
-    book_amount,
-    book_isbn
-) VALUES (
+), (
     'Book title 10',
     'Action',
     'Emily',

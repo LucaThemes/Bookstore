@@ -15,19 +15,11 @@ use PDO;
 
 class Db {
 
-    // We'll make a separate config file later on
-    // const $db = 'bookstore';
-    
-    const HOST = '127.0.0.1';
-    const DBNAME = 'bookstore';
-    const USER = 'root';
-    const PASSWORD = '';
-
     public function connect() {
-        $host = self::HOST;
-        $dbname = self::DBNAME;
-        $user = self::USER;
-        $password = self::PASSWORD;
+        $host     = \Bookstore\Configs\Config::DB_HOST;
+        $dbname   = \Bookstore\Configs\Config::DB_NAME;
+        $user     = \Bookstore\Configs\Config::DB_USER;
+        $password = \Bookstore\Configs\Config::DB_PASSWORD;
         try {
             $connection = new PDO( 'mysql:host=' . $host . ';dbname=' . $dbname, $user, $password );
             $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

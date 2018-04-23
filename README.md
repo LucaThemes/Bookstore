@@ -1,5 +1,8 @@
 # Bookstore
 
+0.0.4 - 19.04.2018
+- constants are now separated in a config file
+
 0.0.3 - 18.04.2018
 - index.php now displays homepage by default and runs a router if there are url parameters provided
 

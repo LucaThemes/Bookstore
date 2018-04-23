@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Our HTML Sidebar
+ * Our Sidebar
  * 
  * @author    Lukasz Formela
  * @link      lukaszformela.com
@@ -12,7 +12,6 @@
 
 ?>
 
-Choose filters:
 <div class="sidebar-filter">
     <div class="sidebar-filter__heading">
         > CATEGORY
@@ -22,29 +21,30 @@ Choose filters:
             <li><a href="/bookstore/category/all">All books</a></li>
             <li><a href="/bookstore/category/drama">Drama</a></li>
             <li><a href="/bookstore/category/comedy">Comedy</a></li>
-            <li><a href="<?php $_SERVER['REQUEST_URI']; ?>">Third option</a>
-                <ul>
-                    <li>SUB CATEGORY 1</li>
-                    <li>SUB CATEGORY 2</li>
-                </ul>
-            </li>
         </ul>
     </div>
 </div>
 <div class="sidebar-filter">
     <div class="sidebar-filter__heading">
-        > PRICE
+        > PRICE (TO BE ADDED)
     </div>
     <div class="sidebar-filter__filters">
         <ul>
             <li><a href="<?php $_SERVER['REQUEST_URI']; ?>">0-20</a></li>
             <li><a href="<?php $_SERVER['REQUEST_URI']; ?>">20-30</a></li>
-            <li><a href="<?php $_SERVER['REQUEST_URI']; ?>">30+</a>
-                <ul>
-                    <li>SUB AUTHOR 1</li>
-                    <li>SUB AUTHOR 2</li>
-                </ul>
-            </li>
+            <li><a href="<?php $_SERVER['REQUEST_URI']; ?>">30+</a></li>
+        </ul>
+    </div>
+</div>
+<div class="sidebar-filter">
+    <div class="sidebar-filter__heading">
+        > RATING (TO BE ADDED)
+    </div>
+    <div class="sidebar-filter__filters">
+        <ul>
+            <li><a href="<?php $_SERVER['REQUEST_URI']; ?>">0-1</a></li>
+            <li><a href="<?php $_SERVER['REQUEST_URI']; ?>">2-3</a></li>
+            <li><a href="<?php $_SERVER['REQUEST_URI']; ?>">4-5</a></li>
         </ul>
     </div>
 </div>
