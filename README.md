@@ -1,5 +1,8 @@
 # Bookstore
 
+0.0.5 - 23.04.2018
+- general improvements
+
 0.0.4 - 19.04.2018
 - constants are now separated in a config file
 
